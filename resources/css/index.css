@@ -1,0 +1,147 @@
+/* General */
+
+* {
+  font-family: "Open Sans", sans-serif;
+  scroll-behavior: smooth;
+  color: white;
+}
+
+h1 {
+  font-family: "Cinzel", serif;
+  font-weight: 1000;
+}
+
+p {
+  font-size: 1.15em;
+}
+
+.nav-item {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.ml-auto:last-child {
+  margin-right: 50px;
+}
+
+.navbar-light .navbar-toggler {
+  color: black;
+  border: none;
+}
+
+.navbar-light .navbar-toggler:focus {
+  outline: none;
+  border: none;
+}
+
+.image-small {
+  display: inline-block;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.image-small > img {
+  height: 200px;
+}
+
+
+
+
+
+/* Pace loader at top */
+
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.pace-inactive {
+  display: none;
+}
+
+.pace .pace-progress {
+  background: #000;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 2px;
+}
+
+.input-element {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 17px;
+}
+
+label::after {
+  content: "*";
+}
+
+@media (max-width: 990px) {
+  .margin-top-heading {
+    padding-top: 100px;
+  }
+
+  #onphone-cover {
+    display: block;
+  }
+
+  .form-padding {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  #fullpage::first-child {
+    padding-bottom: 150px;
+  }
+
+  #csr {
+    padding-bottom: 200px;
+  }
+}
+
+@media (min-width: 990px) {
+  .margin-top-heading {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+
+  #onphone-cover {
+    display: none;
+  }
+
+  .form-padding {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+}
+
+/* .carousel-inner>.active { width: 100% } */
+#onphone {
+  padding: 25px;
+  padding-top: 45px;
+  font-family: "Great Vibes", cursive;
+  text-align: center;
+  font-size: 35px;
+  color: black;
+}
+
+html {
+  overflow: scroll;
+  overflow-x: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
+}

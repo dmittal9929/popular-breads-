@@ -1,0 +1,387 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.29.2/sweetalert2.all.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+	<title>Admin Panel</title>
+	<style>
+		* {
+			font-family: 'Open Sans', sans-serif;
+		}
+	</style>
+	<meta name="author" content="Nikhil Singh, nikhils4, nikhils4.github.io">
+</head>
+
+<body>
+
+	<!-- Add navigation bar -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+		<a class="navbar-brand" href="#">Popular Breads</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav ml-auto" style="padding-right: 100px;">
+				<li class="nav-item active" style="padding-left: 15px; padding-right: 15px">
+					<a class="nav-link" href="panel.html">Products</a>
+				</li>
+				<li class="nav-item" style="padding-left: 15px; padding-right: 15px">
+					<a class="nav-link" href="add.html">Admin</a>
+				</li>
+				<li class="nav-item" style="padding-left: 15px; padding-right: 15px">
+					<a class="nav-link" href="profile.html">Profile</a>
+				</li>
+				<li class="nav-item" style="padding-left: 15px; padding-right: 15px">
+					<button id="logoutBtn" class="btn btn-danger">Logout</button>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+
+	<ul class="nav nav-tabs" id="myTab" role="tablist" style="margin-top: 90px;">
+		<li class="nav-item" style="width: 50%; text-align: center;">
+			<a class="nav-link active" id="home-tab" data-toggle="tab" href="#addproducts" role="tab" aria-controls="home"
+				aria-selected="true">Add products</a>
+		</li>
+		<li class="nav-item" style="width: 50%; text-align: center;">
+			<a class="nav-link" id="profile-tab" data-toggle="tab" href="#updateproducts" role="tab" aria-controls="profile"
+				aria-selected="false">Modify products</a>
+		</li>
+	</ul>
+	<div class="tab-content" id="myTabContent">
+		<div class="tab-pane fade show active" id="addproducts" role="tabpanel" aria-labelledby="home-tab">
+			<!-- form to add products -->
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-1 col-lg-3"></div>
+					<div class="col-10 col-lg-6"
+						style="border : 2px solid gainsboro; border-radius : 5px; margin-top: 60px; padding: 50px; padding-right: 50px;">
+						<hr>
+						<h2 style="text-align: center;">Add product</h2>
+						<hr>
+						<div class="form-group" style="margin-top: 40px">
+							<label for="exampleInputEmail1">Name</label>
+							<input type="text" class="form-control" id="name" aria-describedby="nameHelp">
+						</div>
+						<div class="form-group">
+							<label for="exampleFormControlFile1">Image file</label>
+							<input type="file" class="form-control-file" id="file">
+						</div>
+						<div style="text-align: center; margin-top: 30px">
+							<button type="submit" id="submit" class="btn btn-primary" style="min-width: 50%">Submit</button>
+						</div>
+					</div>
+					<div class="col-1 col-lg-3"></div>
+				</div>
+			</div>
+		</div>
+		<div class="tab-pane fade" id="updateproducts" role="tabpanel" aria-labelledby="profile-tab">
+			<!-- display products -->
+			<div class="container-fluid" style="margin-top: 50px;">
+				<div class="row">
+					<div class="col-1"></div>
+					<div class="col-10 table-responsive">
+						<hr>
+						<h2 style="text-align: center;">Products</h2>
+						<hr>
+						<table class="table">
+							<thead>
+								<tr>
+									<th scope="col">Serial</th>
+									<th scope="col">Image</th>
+									<th scope="col">Name</th>
+									<th scope="col">Update</th>
+									<th scope="col">Remove</th>
+								</tr>
+							</thead>
+							<tbody>
+
+							</tbody>
+						</table>
+					</div>
+					<div class="col-1 "></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+		crossorigin="anonymous"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+		crossorigin="anonymous"></script>
+
+	<script>
+
+		if(localStorage.getItem('pbToken') === null){
+			window.location.href = 'login.html'
+		}
+
+		document.getElementById('logoutBtn').addEventListener('click', () => {
+			localStorage.removeItem('pbToken');
+			Swal.fire(
+				'Logged out',
+				'Successfully logged out',
+				'success'
+			)
+			.then(() => {
+				window.location.href = 'login.html'
+			})
+		})
+
+
+		// add product done
+		document.getElementById('submit').addEventListener("click", (event) => {
+			document.getElementById('submit').innerHTML = 'Uploading...'
+			let formData = new FormData();
+			formData.append("image", document.getElementById('file').files[0]);
+			formData.append("name", document.getElementById('name').value);
+			fetch('https://popularbreadapi.herokuapp.com/admin/product', {
+				method: "POST",
+				headers: {
+					'Authorization': 'Bearer ' + localStorage.getItem('pbToken')
+				},
+				body: formData
+			})
+				.then(res => {
+					return res.json();
+				})
+				.then(data => {
+					console.log(data)
+					if (data.name === undefined) {
+						document.getElementById('submit').innerHTML = 'Submit'
+						Swal.fire(
+							'Oopppsss..',
+							'There was some technical glitch!',
+							'error'
+						)
+					} else {
+						document.getElementById('submit').innerHTML = 'Submit'
+						Swal.fire(
+							'Added',
+							'Product name has been added.',
+							'success'
+						)
+						getProductsList()
+					}
+				})
+				.catch(err => {
+					document.getElementById('submit').innerHTML = 'Submit'
+					Swal.fire(
+						'Oopppsss..',
+						'There was some internal error!',
+						'error'
+					)
+				})
+		})
+
+		// show product done
+		window.onload = () => {
+			getProductsList()
+		}
+
+		function getProductsList() {
+			fetch('https://popularbreadapi.herokuapp.com/products', {
+				method: 'GET',
+				headers: {
+					'Content-Type': 'application/json;charset=utf-8',
+					'Authorization': 'Bearer ' + localStorage.getItem('pbToken')
+				}
+			})
+				.then((res) => {
+					return res.json()
+				})
+				.then((data) => {
+					console.log(data)
+					let content = "";
+					for (let i = 0; i < data.length; i++) {
+						content = content + `<tr>
+				<td scope='row' style='padding: 20px' >${i + 1}</td>
+				<td scope='row' style='padding: 20px' ><img src='${data[i].image}' style=' min-width:250px; max-width: 275px'></td>
+				<td scope='row' style='padding: 20px' >${data[i].name}</td>
+				<td scope='row' >
+					<button style='margin: 5px' onclick='updateName(event)' class='btn btn-primary' data-id='${data[i]._id}'>Update name</button>
+					<button style='margin: 5px' onclick='updateImage(event)' class='btn btn-primary' data-id='${data[i]._id}'>Update image</button>
+				</td>
+				<td scope='row' >
+					<button style='margin: 5px' onclick='deleteProduct(event)' class='btn btn-danger' data-id='${data[i]._id}'>Remove product</button>
+				</td>
+			</tr>`
+					}
+					document.getElementsByTagName('tbody')[0].innerHTML = content;
+				})
+				.catch((err) => {
+					Swal.fire(
+						'Oopppsss..',
+						'There was some internal error!',
+						'error'
+					)
+				})
+		}
+
+		//update name 
+		function updateName(event) {
+			let id = event.target.getAttribute('data-id')
+			Swal.fire({
+				title: 'Enter new name',
+				input: 'text',
+				showCancelButton: true,
+				confirmButtonText: 'Update',
+				inputPlaceholder: 'Enter the products\'s new name here'
+			})
+				.then(res => {
+					if (res.value !== undefined && res.value.length > 0) {
+						fetch(`https://popularbreadapi.herokuapp.com/admin/product/${id}`, {
+							method: 'PATCH',
+							headers: {
+								'Content-Type': 'application/json;charset=utf-8',
+								'Authorization': 'Bearer ' + localStorage.getItem('pbToken')
+							},
+							body: JSON.stringify({ name: res.value })
+						})
+							.then(res => {
+								return res.json();
+							})
+							.then(data => {
+								if (data.name !== undefined) {
+									Swal.fire(
+										'Updated',
+										'Product\'s name has been updated.',
+										'success'
+									)
+									getProductsList();
+								} else {
+									Swal.fire(
+										'Oopppsss..',
+										'There was some technical glitch!',
+										'error'
+									)
+								}
+							})
+							.catch(err => {
+								Swal.fire(
+									'Oopppsss..',
+									'There was some internal error!',
+									'error'
+								)
+							})
+					}
+				})
+		}
+
+		// update image
+		function updateImage(event) {
+			let id = event.target.getAttribute('data-id')
+			Swal.fire({
+				title: 'Select image to update',
+				input: 'file',
+				showCancelButton: true,
+				confirmButtonText: 'Update',
+				inputAttributes: {
+					'accept': 'image/*',
+					'aria-label': 'Upload your profile picture'
+				}
+			})
+				.then(res => {
+					if (res.value) {
+						console.log('gaya')
+						let formData = new FormData();
+						formData.append("image", res.value);
+						fetch(`https://popularbreadapi.herokuapp.com/admin/product/${id}`, {
+							method: 'PATCH',
+							headers: {
+								'Authorization': 'Bearer ' + localStorage.getItem('pbToken')
+							},
+							body: formData
+						})
+							.then(res => {
+								return res.json();
+							})
+							.then(data => {
+								if (data.name !== undefined) {
+									Swal.fire(
+										'Updated',
+										'Product\'s image has been updated.',
+										'success'
+									)
+									getProductsList();
+								} else {
+									Swal.fire(
+										'Oopppsss..',
+										'There was some technical glitch!',
+										'error'
+									)
+								}
+							})
+							.catch(err => {
+								Swal.fire(
+									'Oopppsss..',
+									'There was some internal error!',
+									'error'
+								)
+							})
+					}
+					console.log(res)
+				})
+		}
+
+		// delete product done
+		function deleteProduct(event) {
+			let id = event.target.getAttribute('data-id')
+			Swal.fire({
+				title: 'Are you sure?',
+				text: "You won't be able to revert this!",
+				icon: 'warning',
+				showCancelButton: true,
+				confirmButtonColor: '#3085d6',
+				cancelButtonColor: '#d33',
+				confirmButtonText: 'Yes, remove it!'
+			}).then((result) => {
+				if (result.value) {
+					fetch(`https://popularbreadapi.herokuapp.com/admin/product/${id}`, {
+						method: 'DELETE',
+						headers: {
+							'Content-Type': 'application/json;charset=utf-8',
+							'Authorization': 'Bearer ' + localStorage.getItem('pbToken')
+						}
+					})
+						.then(res => {
+							return res.json();
+						})
+						.then(data => {
+							if (result.value) {
+								getProductsList();
+								Swal.fire(
+									'Deleted!',
+									'Your product has been deleted.',
+									'success'
+								)
+							}
+							console.log(data)
+						})
+						.catch(err => {
+							Swal.fire(
+								'Oopppsss..',
+								'There was some internal error!',
+								'error'
+							)
+						})
+				}
+			})
+		}
+	</script>
+</body>
+
+</html>

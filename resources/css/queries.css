@@ -1,0 +1,157 @@
+/*             PC               */
+
+@media only screen and (max-width:1200px) {
+    .hero-text-box {
+        width: 100%;
+        padding: 0 2%;
+    }
+    .row { padding: 0 2%; }
+}
+
+/*           tablets            */
+
+@media only screen and (max-width:1023px) {
+    body { font-size: 18px;}
+    section { padding: 60px 0; }
+    .long-copy {
+        width: 85%;
+        margin-left: 10%;
+    }
+    .steps-box { margin-top: 10px; }
+    .cities-box { padding: 1%; }
+    .work-step { margin-bottom: 40px; }
+    .work-step:last-of-type { margin-bottom: 80px; }
+    .app-screen { width: 50%;}
+}
+
+/*        largerphones          */
+
+@media only screen and (max-width:767px) {
+    .cities-box h3 { font-size: 85% }
+    .cities-box {
+        padding: 1%;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        border: 0px;
+    }
+    .cities-box:hover, .cities-box:active {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+        background-color: white;
+        border: 0px; 
+    }
+    .r1, .r2, .r3 { font-size: 80%;}
+    cite {
+	   font-size: 75%;
+       padding-left: 0px;
+    }
+    cite img { 
+        width: 40px; 
+        margin-right: 0px;
+        height: auto; 
+    }
+    .work-step { font-size: 90%; }
+    .work-step:last-of-type { margin-bottom: 30px;}
+    .work-step div {
+        color: #e67e22;
+        border: 2px solid #e67e22;
+        display: inline-block;
+        border-radius: 50%;
+        height: 45px;
+        width: 45px;
+        text-align: center;
+        padding: 6px;
+        float: left;
+        font-size: 150%;
+        margin-right: 10px;
+        margin-bottom: 30px;
+    }
+    .btn-app img {
+        height: 30px;
+        width: auto;
+        margin-right: 10px;
+    }
+    .steps-box:last-child {
+	   margin-top: 60px;
+       padding-left: 3%;
+    }
+    .app-screen {
+	   width: 80%;
+    }
+    .mobile-nav-icon { display: inline-block }
+    h1 { font-size: 180%; }
+    h2 { font-size: 150%; }
+    .plan-price { font-size: 200%; }
+    .main-nav { 
+        margin-top: 20px;
+        margin-left: 25px;
+        float: left;
+    }
+    .main-nav li {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .sticky .main-nav li {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .main-nav li a:link, .main-nav li a:visited {
+        display: block;
+        color: #fff;
+        border: 0px;
+        font-size: 100%;
+        padding: 2px 0px;
+    }
+    .main-nav li a:hover, .main-nav li a:active {
+        border-bottom: none;
+    }
+    .hero-text-box { position: absolute; }
+    footer-nav {
+        width: 100%;
+    }
+    .main-nav { 
+        display: none; 
+        margin-left: 100px;
+    }
+    .sticky .main-nav li a:link, .sticky .main-nav li a:visited {
+        font-size: 60%;
+        padding: 0;
+        margin: 0;
+    }
+    .sticky .main-nav {
+        float: left;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .sticky .logo-black { 
+        height:80px;
+        padding: 2% 4% 2% 0; 
+    }
+    .sticky .mobile-nav-icon i {
+        color: #555;
+    }
+    .sticky .mobile-nav-icon {
+        display: inline-block;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .social-link {
+        float: left;
+        -webkit-column-width: 100%;
+        column-width: 100%;
+    }
+    .form-box {
+        width: 100%;
+        position: relative;
+        height: auto;
+        background-color: #fff;
+        padding: 30px;
+    }
+}
+    
+/*        smallphones           */
+
+@media only screen and (max-width: 480px) {
+    
+}

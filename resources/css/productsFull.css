@@ -1,0 +1,75 @@
+* {
+  font-family: "Open Sans", sans-serif;
+  scroll-behavior: smooth;
+  color: white;
+}
+
+h1 {
+  font-family: "Cinzel", serif;
+  font-weight: 1000;
+}
+
+.nav-item {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.ml-auto:last-child {
+  margin-right: 50px;
+}
+
+.navbar-light .navbar-toggler {
+  color: black;
+  border: none;
+}
+
+.navbar-light .navbar-toggler:focus {
+  outline: none;
+  border: none;
+}
+
+/* Pace loader at top */
+
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.pace-inactive {
+  display: none;
+}
+
+.pace .pace-progress {
+  background: #000;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 2px;
+}
+
+@media only screen and (max-width: 600px) {
+  #bread-products,
+  #toast-products,
+  #bakery-products,
+  #pav-products {
+    padding: 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  #bread-products,
+  #toast-products,
+  #bakery-products,
+  #pav-products {
+    padding: 150px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}

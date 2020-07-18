@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="support/css/normalize.css">
+	<link rel="stylesheet" href="resources/css/style.css">
+	<link rel="stylesheet" href="resources/css/queries.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<link rel="stylesheet" href="support/css/grid.css">
+	<link href="https://unpkg.com/ionicons@4.1.2/dist/css/ionicons.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+	<meta name="author" content="Nikhil Singh, nikhils4, nikhils4.github.io">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.29.2/sweetalert2.all.js"></script>
+	<title>Popular Bakery</title>
+	<style>
+		.input-element {
+			margin-top: 15px;
+			margin-bottom: 15px;
+		}
+
+		label {
+			font-size: 17px;
+		}
+
+		label::after {
+			content: '*';
+		}
+
+		footer{
+			padding: 25px
+		}
+
+		@media (max-width: 700px) {
+			.collab-img {
+				width: 40%;
+			}
+			.spl-img{
+					width: 50%;
+			}
+		}
+
+		@media (min-width: 700px) {
+			.collab-img {
+				height: 100px;
+			}
+			.spl-img{
+					width: 25%;
+			}
+		}
+
+	</style>
+</head>
+
+<body>
+	<header>
+		<nav>
+			<div class="row">
+				<img src="resources/images/logo-white.png" alt="PopularBread logo" class="logo-black">
+				<img src="resources/images/logo.png" alt="PopularBread logo"
+					style="height: 50px; width: 120px; margin-top: 30px;" class="logo">
+				<ul class="main-nav js--main-nav">
+					<li><a href="#cities">Our cities</a></li>
+					<li><a href="productNew.html">Our products</a></li>
+				</ul>
+				<a class="mobile-nav-icon js--nav-icon"><i class="icon ion-md-menu"></i></a>
+			</div>
+		</nav>
+		<div class="hero-text-box">
+			<h1>
+				Popular means bread.<br>Bread means Popular.
+			</h1>
+		</div>
+	</header>
+	<section class="section-features js--section-features" id="features">
+		<div class="row">
+			<h2>About Us</h2>
+			<p class="long-feat">
+				Since we opened our doors in 1967, we have been dedicated to the principle of maximising quality while keeping
+				customer satisfaction our topmost priority. The first fully automatic plant of Madhya Pradesh, Popular Bread and
+				Food Products, offer wide range of breads made entirely from scratch using finest ingredients. </p>
+		</div>
+	</section>
+	<section class="section-meals">
+		<div class="row"
+			style="text-align: center; display: flex; flex-direction: row; justify-content: space-evenly; flex-wrap: wrap; padding-top: 50px">
+			<img src="resources/images/special/one.jpeg" class="spl-img" alt="First image">
+			<img src="resources/images/special/two.jpeg" class="spl-img" alt="Second image">
+			<img src="resources/images/special/three.jpeg" class="spl-img" alt="Third image">
+			<img src="resources/images/special/four.jpeg" class="spl-img" alt="Fourth image">
+		</div>
+	</section>
+	<section>
+		<div class="row" id="explore">
+			<h2>Explore more</h2>
+			<p class="long-feat">
+				The company has started a new range of bakery items, including Khari, Cream Rolls and Cookies.
+			<div style="text-align: center;">
+				<a class="btn btn-full js--scroll-to-plans" href="productNew.html">Know more</a>
+			</div>
+			</p>
+		</div>
+	</section>
+	<section class="section-cities" id="cities">
+		<div class="row">
+			<h2>Our factory locations</h2>
+		</div>
+		<div class="row" id="food1" style="text-align: center;">
+			<div class="col span-1-of-4">
+				<h3>Indore, Madhya Pradesh</h3>
+				<p>
+					Popular Bread and Food Products
+				</p>
+				<p>
+					30, Industrial Estate, Kila Maidan
+				</p>
+				<p>
+					Indore, M.P.
+				</p>
+				<br>
+				<p>
+					<b>Email:</b> info@popularbreadindore.com
+				</p>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="row">
+			<h2>Our collaborators</h2>
+		</div>
+
+		<div class="row"
+			style="text-align: center; display: flex; flex-direction: row; justify-content: space-evenly; flex-wrap: wrap; padding-top: 50px">
+			<img src="resources/images/logo/bigb.jpg" alt="Second image" style="height: 100px; margin: 20px">
+			<img src="resources/images/logo/dmart.png" alt="First image" style="height: 80px;  margin: 20px">
+			<img src="resources/images/logo/ghartak.png" alt="Third image" style="height: 100px;  margin: 20px">
+			<img src="resources/images/logo/zomato.png" alt="Second image" style="height: 100px;  margin: 20px">
+			<img src="resources/images/logo/more.png" class="collab-img" alt="First image" style="margin: 20px">
+			<img src="resources/images/logo/swiggy.png" alt="Third image" style="height: 100px;  margin: 20px">
+		</div>
+	</section>
+	<section>
+		<div class="row">
+			<h2>Contact Us</h2>
+		</div>
+		<div class="row">
+			<div class="input-element">
+				<label for="name">Name</label>
+				<input oninput="nameVerify(event)" type="text" class="form-control" id="name" aria-describedby="nameHelp"
+					placeholder="Enter name">
+			</div>
+			<div class="input-element">
+				<label for="email">Email address</label>
+				<input oninput="emailVerify(event)" type="email" class="form-control" id="email" aria-describedby="emailHelp"
+					placeholder="Enter email">
+			</div>
+			<div class="input-element">
+				<label for="phone">Contact number</label>
+				<input oninput="phoneVerify(event)" type="text" class="form-control" id="phone" aria-describedby="phoneHelp"
+					placeholder="Enter contact number">
+			</div>
+			<div class="input-element">
+				<label for="location">Location</label>
+				<input oninput="verify(event)" type="text" class="form-control" id="location" aria-describedby="locationHelp"
+					placeholder="Enter location">
+			</div>
+			<div class="input-element">
+				<label for="comment">Comment</label>
+				<textarea oninput="verify(event)" type="text" class="form-control" id="comment" aria-describedby="commentHelp"
+					placeholder="Enter comments"></textarea>
+			</div>
+			<div class="input-element" style="text-align: center;">
+				<a style="text-align: center;" id="submit" class="btn btn-full js--scroll-to-plans" href="#">Submit</a>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="row">
+			<h2>Feedback</h2>
+		</div>
+		<div class="row">
+			<div class="input-element">
+				<label for="nameFB">Name</label>
+				<input oninput="nameVerify(event)" type="text" class="form-control" id="nameFB" aria-describedby="nameHelp"
+					placeholder="Enter name">
+			</div>
+			<div class="input-element">
+				<label for="emailFB">Email address</label>
+				<input oninput="emailVerify(event)" type="email" class="form-control" id="emailFB" aria-describedby="emailHelp"
+					placeholder="Enter email">
+			</div>
+			<div class="input-element">
+				<label for="phoneFB">Contact number</label>
+				<input oninput="phoneVerify(event)" type="text" class="form-control" id="phoneFB" aria-describedby="phoneHelp"
+					placeholder="Enter contact number">
+			</div>
+			<div class="input-element">
+				<label for="productFB">Product name</label>
+				<input oninput="verify(event)" type="text" class="form-control" id="productFB" aria-describedby="locationHelp"
+					placeholder="Enter product name">
+			</div>
+			<div class="input-element">
+				<label for="commentFB">Description</label>
+				<textarea oninput="verify(event)" type="text" class="form-control" id="commentFB" aria-describedby="commentHelp"
+					placeholder="Enter comments"></textarea>
+			</div>
+			<div class="input-element" style="text-align: center;">
+				<a style="text-align: center;" id="submitFB" class="btn btn-full js--scroll-to-plans" href="#">Submit</a>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="row">
+			<div class="col span-1-of-2">
+				<ul class="social-link">
+					<li>
+						<a href="https://m.facebook.com/PopularBreadAndFoodProducts/">
+							<i class="icon ion-logo-facebook"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.instagram.com/invites/contact/?i=jkriz7hop27x&utm_content=fo29xym">
+							<i class="icon ion-logo-instagram"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<p>
+				Copyright &copy; 2020 by Popular Bread, Indore. All rights reserved;
+			</p>
+		</div>
+	</footer>
+	<script>
+
+		function emailVerify(event) {
+			let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+			if (event.target == undefined) {
+				if (re.test(event)) {
+					return true;
+				} else {
+					return false;
+				}
+			}
+			else {
+				let email = event.target.value;
+				if (re.test(email)) {
+					event.target.style.borderColor = "Green";
+					return true;
+				} else {
+					event.target.style.borderColor = "Red";
+					return false;
+				}
+			}
+		}
+
+		function nameVerify(event) {
+			if (event.target == undefined) {
+				if (event.length > 0) {
+					return true;
+				} else {
+					return false;
+				}
+			}
+			else {
+				let name = event.target.value;
+				if (name.length > 0) {
+					event.target.style.borderColor = "Green";
+					return true;
+				} else {
+					event.target.style.borderColor = "Red";
+					return false;
+				}
+			}
+		}
+
+		function verify(event) {
+			if (event.target == undefined) {
+				if (event.length > 0) {
+					return true;
+				}
+				else {
+					return false;
+				}
+			}
+			else {
+				let message = event.target.value;
+				if (message.length > 0) {
+					event.target.style.borderColor = "Green";
+					return true;
+				} else {
+					event.target.style.borderColor = "Red";
+					return false;
+				}
+			}
+		}
+
+		function phoneVerify(event) {
+			if (event.target == undefined) {
+				if (event.length > 9) {
+					return true;
+				}
+				else {
+					return false;
+				}
+			}
+			else {
+				let message = event.target.value;
+				if (message.length > 9) {
+					event.target.style.borderColor = "Green";
+					return true;
+				} else {
+					event.target.style.borderColor = "Red";
+					return false;
+				}
+			}
+		}
+
+
+		function validateContactUs(obj) {
+			if (nameVerify(obj.name) && phoneVerify(obj.contact_number) && emailVerify(obj.email_id) && verify(obj.description) && verify(obj.address)) {
+				return true;
+			}
+			return false;
+		}
+		function validateFeedback(obj) {
+			if (nameVerify(obj.name) && phoneVerify(obj.contact) && emailVerify(obj.email) && verify(obj.product) && verify(obj.description)) {
+				return true;
+			}
+			return false;
+		}
+
+		window.onload = () => {
+			document.getElementById('submit').addEventListener('click', (e) => {
+				e.preventDefault();
+				let name = document.getElementById('name').value;
+				let email_id = document.getElementById('email').value;
+				let contact_number = document.getElementById('phone').value;
+				let address = document.getElementById('location').value;
+				let description = document.getElementById('comment').value;
+				let data = { name, contact_number, email_id, description, address }
+				if (validateContactUs(data)) {
+					// fetch call
+					document.getElementById('submit').innerHTML = "Submitting..."
+					fetch('https://popularbreadapi.herokuapp.com/enquiry', {
+						method: "POST",
+						headers: {
+							'Content-Type': 'application/json'
+						},
+						body: JSON.stringify(data)
+					})
+						.then(res => {
+							document.getElementById('name').value = "";
+							document.getElementById('email').value = "";
+							document.getElementById('phone').value = "";
+							document.getElementById('location').value = "";
+							document.getElementById('comment').value = "";
+							document.getElementById('submit').innerHTML = "Submit"
+							return res.json();
+						})
+						.then(data => {
+							if (data.msg === undefined) {
+								document.getElementById('submit').innerHTML = 'Submit'
+								Swal.fire(
+									'Oopppsss..',
+									'There was some technical glitch!',
+									'error'
+								)
+							} else {
+								document.getElementById('submit').innerHTML = 'Submit'
+								Swal.fire(
+									'Submitted',
+									'Successfully submitted the details',
+									'success'
+								)
+							}
+						})
+						.catch(err => {
+							console.log(err)
+							Swal.fire(
+								'Oopppsss..',
+								'There was some internal error!',
+								'error'
+							)
+						})
+				} else {
+					Swal.fire(
+						'Oopppsss..',
+						'Please enter all the fields correctly',
+						'error'
+					)
+				}
+			})
+
+			document.getElementById('submitFB').addEventListener('click', (e) => {
+				e.preventDefault();
+				let name = document.getElementById('nameFB').value;
+				let email = document.getElementById('emailFB').value;
+				let contact = document.getElementById('phoneFB').value;
+				let product = document.getElementById('productFB').value;
+				let description = document.getElementById('commentFB').value;
+				let data = { name, contact, email, product, description }
+				console.log(data)
+				if (validateFeedback(data)) {
+					document.getElementById('submitFB').innerHTML = "Submitting..."
+					fetch('https://popularbreadapi.herokuapp.com/feedback', {
+						method: "POST",
+						headers: {
+							'Content-Type': 'application/json'
+						},
+						body: JSON.stringify(data)
+					})
+						.then(res => {
+							document.getElementById('submitFB').innerHTML = "Submit"
+							document.getElementById('nameFB').value = "";
+							document.getElementById('emailFB').value = "";
+							document.getElementById('phoneFB').value = "";
+							document.getElementById('productFB').value = "";
+							document.getElementById('commentFB').value = "";
+							return res.json();
+						})
+						.then(data => {
+							if (data.msg === undefined) {
+								document.getElementById('submit').innerHTML = 'Submit'
+								Swal.fire(
+									'Oopppsss..',
+									'There was some technical glitch!',
+									'error'
+								)
+							} else {
+								document.getElementById('submit').innerHTML = 'Submit'
+								Swal.fire(
+									'Submitted',
+									'Successfully submitted the details',
+									'success'
+								)
+							}
+						})
+						.catch(err => {
+							console.log(err)
+							Swal.fire(
+								'Oopppsss..',
+								'There was some internal error!',
+								'error'
+							)
+
+						})
+				} else {
+					Swal.fire(
+						'Oopppsss..',
+						'Please enter all the fields correctly',
+						'error'
+					)
+				}
+			})
+		}
+	</script>
+	<script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+	<script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="resources/js/script.js"></script>
+	<script src="resources/js/jquery.waypoints.min.js"></script>
+</body>
+
+</html>
+
