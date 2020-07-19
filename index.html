@@ -2,467 +2,469 @@
 <html lang="en">
 
 <head>
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="support/css/normalize.css">
-	<link rel="stylesheet" href="resources/css/style.css">
-	<link rel="stylesheet" href="resources/css/queries.css">
-	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-	<link rel="stylesheet" href="support/css/grid.css">
-	<link href="https://unpkg.com/ionicons@4.1.2/dist/css/ionicons.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
-	<meta name="author" content="Nikhil Singh, nikhils4, nikhils4.github.io">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.29.2/sweetalert2.all.js"></script>
-	<title>Popular Bakery</title>
-	<style>
-		.input-element {
-			margin-top: 15px;
-			margin-bottom: 15px;
-		}
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="fullpage.css" />
+	<link rel="stylesheet" type="text/css" href="./resources/css/index.css" />
 
-		label {
-			font-size: 17px;
-		}
+	<title>Popular Breads | Home</title>
 
-		label::after {
-			content: '*';
-		}
-
-		footer{
-			padding: 25px
-		}
-
-		@media (max-width: 700px) {
-			.collab-img {
-				width: 40%;
-			}
-			.spl-img{
-					width: 50%;
-			}
-		}
-
-		@media (min-width: 700px) {
-			.collab-img {
-				height: 100px;
-			}
-			.spl-img{
-					width: 25%;
-			}
-		}
-
-	</style>
 </head>
 
 <body>
-	<header>
-		<nav>
-			<div class="row">
-				<img src="resources/images/logo-white.png" alt="PopularBread logo" class="logo-black">
-				<img src="resources/images/logo.png" alt="PopularBread logo"
-					style="height: 50px; width: 120px; margin-top: 30px;" class="logo">
-				<ul class="main-nav js--main-nav">
-					<li><a href="#cities">Our cities</a></li>
-					<li><a href="productNew.html">Our products</a></li>
-				</ul>
-				<a class="mobile-nav-icon js--nav-icon"><i class="icon ion-md-menu"></i></a>
+	<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="backdrop-filter: blur(5px);">
+		<a class="navbar-brand" href="index.html"><img src="./resources/images/logo.png" style="height: 40px;"></a>
+		<button id="close-nav-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item active">
+					<a class="nav-link close-nav" href="#aboutus">About us</a>
+				</li>
+				<li>
+					<div class="dropdown">
+						<a class="nav-link" href="#" class="dropdown-toggle" data-toggle="dropdown"
+							style="margin-left: 15px;">Products</a>
+						<div class="dropdown-menu">
+							<a href="#" class="dropdown-item" id="prod-bread">Breads</a>
+							<a href="#" class="dropdown-item" id="prod-pav">Pav and Bun</a>
+							<a href="#" class="dropdown-item" id="prod-toast">Toast</a>
+							<a href="#" class="dropdown-item" id="prod-bakery">Other Bakery Items</a>
+						</div>
+					</div>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link close-nav" href="#csr">CSR</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link close-nav" href="#collaborators">Collaborators</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link close-nav" href="#factories">Our factories</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link close-nav" href="#feedback">Feedback</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link close-nav" href="#contactus">Contact Us</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div id="fullpage">
+		<div class="section fp-auto-height-responsive">
+			<!-- <a href="#contact-us">Go there</a> -->
+			<!-- Main carousel -->
+			<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+				<div class="carousel-inner">
+					<!-- <div class="carousel-item active"">h
+			<img class=" d-block w-100" src="./resources/images/logo/home.jpeg" alt="First slide" style="max-height: 800px;">
+						<div class="carousel-caption d-none d-md-block"
+							style="left: 5%; bottom: 45%; text-align: left; color: black;">
+							<h1>POPULAR MEANS BREAD</h1>
+							<h1>BREADS MEANS POPULAR</h1>
+						</div>
+					</div> -->
+					<div class="carousel-item active">
+						<img class=" d-block w-100" src="./resources/images/special/one.jpg" alt="First slide"
+							style="max-height: 100vh;">
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100" src="./resources/images/special/four.jpg" alt="Fourth slide"
+							style="max-height: 100vh;">
+					</div>
+					<div class="carousel-item ">
+						<img class="d-block w-100" src="./resources/images/special/two.jpg" alt="Second slide"
+							style="max-height: 100vh;">
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100 h-80" src="./resources/images/special/three.jpg" alt="Third slide"
+							style="max-height: 100vh;">
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100 h-80" src="./resources/images/topImg.jpeg" alt="Fifth slide"
+							style="max-height: 100vh;">
+					</div>
+				</div>
+
+				<div class="row" id="onphone-cover">
+					<div class="col-12" id="onphone">
+						Celebrating 55 years of Goodness
+					</div>
+					<div class="col-12" style="text-align: center;">
+						<img src="./resources/images/logo-white.png" alt="Logo" style="height: 50%; max-height: 275px;">
+					</div>
+				</div>
 			</div>
-		</nav>
-		<div class="hero-text-box">
-			<h1>
-				Popular means bread.<br>Bread means Popular.
-			</h1>
-		</div>
-	</header>
-	<section class="section-features js--section-features" id="features">
-		<div class="row">
-			<h2>About Us</h2>
-			<p class="long-feat">
-				Since we opened our doors in 1967, we have been dedicated to the principle of maximising quality while keeping
-				customer satisfaction our topmost priority. The first fully automatic plant of Madhya Pradesh, Popular Bread and
-				Food Products, offer wide range of breads made entirely from scratch using finest ingredients. </p>
-		</div>
-	</section>
-	<section class="section-meals">
-		<div class="row"
-			style="text-align: center; display: flex; flex-direction: row; justify-content: space-evenly; flex-wrap: wrap; padding-top: 50px">
-			<img src="resources/images/special/one.jpeg" class="spl-img" alt="First image">
-			<img src="resources/images/special/two.jpeg" class="spl-img" alt="Second image">
-			<img src="resources/images/special/three.jpeg" class="spl-img" alt="Third image">
-			<img src="resources/images/special/four.jpeg" class="spl-img" alt="Fourth image">
-		</div>
-	</section>
-	<section>
-		<div class="row" id="explore">
-			<h2>Explore more</h2>
-			<p class="long-feat">
-				The company has started a new range of bakery items, including Khari, Cream Rolls and Cookies.
-			<div style="text-align: center;">
-				<a class="btn btn-full js--scroll-to-plans" href="productNew.html">Know more</a>
-			</div>
-			</p>
-		</div>
-	</section>
-	<section class="section-cities" id="cities">
-		<div class="row">
-			<h2>Our factory locations</h2>
-		</div>
-		<div class="row" id="food1" style="text-align: center;">
-			<div class="col span-1-of-4">
-				<h3>Indore, Madhya Pradesh</h3>
-				<p>
-					Popular Bread and Food Products
-				</p>
-				<p>
-					30, Industrial Estate, Kila Maidan
-				</p>
-				<p>
-					Indore, M.P.
-				</p>
-				<br>
-				<p>
-					<b>Email:</b> info@popularbreadindore.com
-				</p>
-			</div>
-		</div>
-	</section>
-	<section>
-		<div class="row">
-			<h2>Our collaborators</h2>
+
 		</div>
 
-		<div class="row"
-			style="text-align: center; display: flex; flex-direction: row; justify-content: space-evenly; flex-wrap: wrap; padding-top: 50px">
-			<img src="resources/images/logo/bigb.jpg" alt="Second image" style="height: 100px; margin: 20px">
-			<img src="resources/images/logo/dmart.png" alt="First image" style="height: 80px;  margin: 20px">
-			<img src="resources/images/logo/ghartak.png" alt="Third image" style="height: 100px;  margin: 20px">
-			<img src="resources/images/logo/zomato.png" alt="Second image" style="height: 100px;  margin: 20px">
-			<img src="resources/images/logo/more.png" class="collab-img" alt="First image" style="margin: 20px">
-			<img src="resources/images/logo/swiggy.png" alt="Third image" style="height: 100px;  margin: 20px">
-		</div>
-	</section>
-	<section>
-		<div class="row">
-			<h2>Contact Us</h2>
-		</div>
-		<div class="row">
-			<div class="input-element">
-				<label for="name">Name</label>
-				<input oninput="nameVerify(event)" type="text" class="form-control" id="name" aria-describedby="nameHelp"
-					placeholder="Enter name">
-			</div>
-			<div class="input-element">
-				<label for="email">Email address</label>
-				<input oninput="emailVerify(event)" type="email" class="form-control" id="email" aria-describedby="emailHelp"
-					placeholder="Enter email">
-			</div>
-			<div class="input-element">
-				<label for="phone">Contact number</label>
-				<input oninput="phoneVerify(event)" type="text" class="form-control" id="phone" aria-describedby="phoneHelp"
-					placeholder="Enter contact number">
-			</div>
-			<div class="input-element">
-				<label for="location">Location</label>
-				<input oninput="verify(event)" type="text" class="form-control" id="location" aria-describedby="locationHelp"
-					placeholder="Enter location">
-			</div>
-			<div class="input-element">
-				<label for="comment">Comment</label>
-				<textarea oninput="verify(event)" type="text" class="form-control" id="comment" aria-describedby="commentHelp"
-					placeholder="Enter comments"></textarea>
-			</div>
-			<div class="input-element" style="text-align: center;">
-				<a style="text-align: center;" id="submit" class="btn btn-full js--scroll-to-plans" href="#">Submit</a>
+		<div data-anchor="aboutus" class="section" style="background-color: #e4b251;">
+			<div class="container-fluid">
+				<!-- Heading  -->
+				<div class="row margin-top-heading " style="text-align: center;">
+					<div class="col-12">
+						<h1>About Us</h1>
+					</div>
+				</div>
+
+				<div class="row" style="margin-top: 60px;">
+					<div class="col-12 col-lg-3"></div>
+					<div class="col-12 col-lg-6">
+						<p style="text-align: justify;
+						text-align-last: center; padding: 20px;">Since we opened our doors in 1967, we have been dedicated to the
+							principle of maximising
+							quality while keeping customer satisfaction our topmost priority. The first fully automatic
+							plant of
+							Madhya Pradesh, Popular Bread and Food Products, offer wide range of breads made entirely
+							from scratch
+							using finest ingredients.</p>
+					</div>
+					<div class="col-12 col-lg-3"></div>
+				</div>
 			</div>
 		</div>
-	</section>
-	<section>
-		<div class="row">
-			<h2>Feedback</h2>
+		<div data-anchor="csr" class="section" style="background-color: #e4984d;">
+			<div class="container-fluid">
+
+				<!-- Heading -->
+				<div class="row margin-top-heading " style="text-align: center;">
+					<div class="col-12">
+						<h1>CSR</h1>
+					</div>
+				</div>
+				<!-- Content -->
+				<div class="row" style="margin-top: 35px;">
+					<div class="col-1 col-lg-2"></div>
+					<div class="col-10 col-lg-8">
+						<p style="text-align: justify;
+							text-align-last: center;">Popular Breads Indore has always be dedicated to working in every way to help out the
+							community. We have helped many needy families in the time of need by providing essentials like
+							bread. In the crisis of the COVID-19 pandemic, we collaborated with NGOs and provided them
+							bread at bare minimum prices. And we also gave Bread to the migrant laborers for free.</p>
+					</div>
+					<div class="col-1 col-lg-2"></div>
+				</div>
+
+				<!-- Horizontal scroll -->
+				<div class="row" style="margin-top: 30px;">
+					<div class="col-1 col-lg-2"></div>
+					<div class="col-10 col-lg-8" style="overflow: auto !important; white-space: nowrap !important;">
+						<div class="image-small">
+							<img src="./resources/images/csr/first.JPG">
+						</div>
+						<div class="image-small">
+							<img src="./resources/images/csr/second.JPG">
+						</div>
+						<div class="image-small">
+							<img src="./resources/images/csr/third.JPG">
+						</div>
+						<div class="image-small">
+							<img src="./resources/images/csr/fourth.JPG">
+						</div>
+						<div class="image-small">
+							<img src="./resources/images/csr/fifth.JPG">
+						</div>
+						<div class="image-small">
+							<img src="./resources/images/csr/sixth.JPG">
+						</div>
+						<div class="image-small">
+							<img src="./resources/images/csr/seventh.JPG">
+						</div>
+						<div class="image-small">
+							<img src="./resources/images/csr/eighth.JPG">
+						</div>
+					</div>
+					<div class="col-1 col-lg-2"></div>
+				</div>
+
+
+				<!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+					<div class="carousel-inner">
+					  <div class="carousel-item active">
+						<img class="d-block w-25 h-25" src="./resources/images/csr/first.JPG" alt="First slide">
+					  </div>
+					  <div class="carousel-item">
+						<img class="d-block" src="./resources/images/csr/second.JPG" alt="Second slide">
+					  </div>
+					  <div class="carousel-item">
+						<img class="d-block" src="./resources/images/csr/third.JPG" alt="Third slide">
+					  </div>
+					  <div class="carousel-item">
+						<img class="d-block" src="./resources/images/csr/fourth.JPG" alt="Third slide">
+					  </div>
+					  <div class="carousel-item">
+						<img class="d-block" src="./resources/images/csr/fifth.JPG" alt="Third slide">
+					  </div>
+					  <div class="carousel-item">
+						<img class="d-block" src="./resources/images/csr/sixth.JPG" alt="Third slide">
+					  </div>
+					  <div class="carousel-item">
+						<img class="d-block" src="./resources/images/csr/seventh.JPG" alt="Third slide">
+					  </div>
+					  <div class="carousel-item">
+						<img class="d-block" src="./resources/images/csr/eighth.JPG" alt="Third slide">
+					  </div>
+					</div>
+					<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+					  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					  <span class="sr-only">Previous</span>
+					</a>
+					<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+					  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+					  <span class="sr-only">Next</span>
+					</a>
+				  </div> -->
+
+
+			</div>
 		</div>
-		<div class="row">
-			<div class="input-element">
-				<label for="nameFB">Name</label>
-				<input oninput="nameVerify(event)" type="text" class="form-control" id="nameFB" aria-describedby="nameHelp"
-					placeholder="Enter name">
-			</div>
-			<div class="input-element">
-				<label for="emailFB">Email address</label>
-				<input oninput="emailVerify(event)" type="email" class="form-control" id="emailFB" aria-describedby="emailHelp"
-					placeholder="Enter email">
-			</div>
-			<div class="input-element">
-				<label for="phoneFB">Contact number</label>
-				<input oninput="phoneVerify(event)" type="text" class="form-control" id="phoneFB" aria-describedby="phoneHelp"
-					placeholder="Enter contact number">
-			</div>
-			<div class="input-element">
-				<label for="productFB">Product name</label>
-				<input oninput="verify(event)" type="text" class="form-control" id="productFB" aria-describedby="locationHelp"
-					placeholder="Enter product name">
-			</div>
-			<div class="input-element">
-				<label for="commentFB">Description</label>
-				<textarea oninput="verify(event)" type="text" class="form-control" id="commentFB" aria-describedby="commentHelp"
-					placeholder="Enter comments"></textarea>
-			</div>
-			<div class="input-element" style="text-align: center;">
-				<a style="text-align: center;" id="submitFB" class="btn btn-full js--scroll-to-plans" href="#">Submit</a>
-			</div>
-		</div>
-	</section>
-	<footer>
-		<div class="row">
-			<div class="col span-1-of-2">
-				<ul class="social-link">
-					<li>
-						<a href="https://m.facebook.com/PopularBreadAndFoodProducts/">
-							<i class="icon ion-logo-facebook"></i>
-						</a>
-					</li>
-					<li>
-						<a href="https://www.instagram.com/invites/contact/?i=jkriz7hop27x&utm_content=fo29xym">
-							<i class="icon ion-logo-instagram"></i>
-						</a>
-					</li>
-				</ul>
+
+
+		<div data-anchor="collaborators" class="section" style="background-color: #b04e5d; ">
+			<!-- Collaborators -->
+			<div class="container-fluid">
+				<!-- Heading  -->
+				<div class="margin-top-heading row" style="text-align: center;">
+					<div class="col-12">
+						<h1>Collaborators</h1>
+					</div>
+				</div>
+				<!-- Collaborators image -->
+				<div class="row" style="margin-top: 50px;">
+					<div class="col-1 col-lg-2"></div>
+					<div class="col-10 col-lg-8">
+						<div class="row" style="text-align: center;">
+							<div class="col-6 col-lg-4">
+								<img src="./resources/images/logo/bigb.jpg" style="width: 60%; margin: 10px">
+							</div>
+							<div class="col-6 col-lg-4">
+								<img src="./resources/images/logo/dmart.png"
+									style="width: 60%; margin: 10px; margin-top: 40px;">
+							</div>
+							<div class="col-6 col-lg-4">
+								<img src="./resources/images/logo/swiggy.png" style="width: 60%; margin: 10px">
+							</div>
+							<div class="col-6 col-lg-4">
+								<img src="./resources/images/logo/more.png"
+									style="width: 60%; margin: 10px; margin-top: 40px;">
+							</div>
+							<div class="col-6 col-lg-4">
+								<img src="./resources/images/logo/zomato.png" style="width: 60%; margin: 10px">
+							</div>
+							<div class="col-6 col-lg-4">
+								<img src="./resources/images/ghartak.jpeg"
+									style="width: 60%; margin: 10px;  margin-top: 40px;">
+							</div>
+						</div>
+					</div>
+					<div class="col-1 col-lg-2"></div>
+				</div>
 			</div>
 		</div>
-		<div class="row">
-			<p>
-				Copyright &copy; 2020 by Popular Bread, Indore. All rights reserved;
-			</p>
+
+		<div data-anchor="factories" class="section" style="background-color: #db675a">
+			<div class="container-fluid">
+				<!-- Heading  -->
+				<div class="row margin-top-heading " style="text-align: center; padding-top: 0; padding-bottom: 0;">
+					<div class="col-12">
+						<h1>Factory Location</h1>
+					</div>
+				</div>
+				<!-- Locations of factories -->
+				<div class="row" style="margin-top: 20px; margin-bottom: 60px;">
+					<div class="col-1 col-lg-2"></div>
+					<div class="col-10 col-lg-8" style="text-align: center;">
+						<p>INDORE, MADHYA PRADESH</p>
+						<p>Popular Bread and Food Products<br>
+							30, Industrial Estate, Kila Maidan<br>
+							Indore, M.P.</p>
+					</div>
+					<div class="col-1 col-lg-2"></div>
+				</div>
+
+				<!-- Heading  -->
+				<div class="row" style="text-align: center;">
+					<div class="col-12">
+						<h1>Factory outlet</h1>
+					</div>
+				</div>
+				<!-- Locations of factories -->
+				<div class="row" style="margin-top: 20px;">
+					<div class="col-1 col-lg-2"></div>
+					<div class="col-10 col-lg-8" style="text-align: center;">
+						<p>INDORE, MADHYA PRADESH</p>
+						<p>Popular Bread and Food Products<br>
+							30, Industrial Estate, Kila Maidan<br>
+							Indore, M.P.</p>
+					</div>
+					<div class="col-1 col-lg-2"></div>
+				</div>
+			</div>
 		</div>
-	</footer>
-	<script>
 
-		function emailVerify(event) {
-			let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-			if (event.target == undefined) {
-				if (re.test(event)) {
-					return true;
-				} else {
-					return false;
-				}
-			}
-			else {
-				let email = event.target.value;
-				if (re.test(email)) {
-					event.target.style.borderColor = "Green";
-					return true;
-				} else {
-					event.target.style.borderColor = "Red";
-					return false;
-				}
-			}
-		}
+		<div data-anchor="feedback" class="section" style="background-color: #e4984d;">
+			<div class="container-fluid">
+				<div class="margin-top-heading row" style="text-align: center; ">
+					<div class="col-12">
+						<h1>Feedback</h1>
+					</div>
+				</div>
+				<div class="row form-padding" style="padding-bottom: 150px;">
+					<div class="form-group col-12 col-lg-6">
+						<label for="nameFB">Name</label>
+						<input oninput="nameVerify(event)" type="text" class="form-control" id="nameFB"
+							aria-describedby="nameHelp" placeholder="Enter name">
+					</div>
+					<div class="form-group col-12 col-lg-6">
+						<label for="emailFB">Email address</label>
+						<input oninput="emailVerify(event)" type="email" class="form-control" id="emailFB"
+							aria-describedby="emailHelp" placeholder="Enter email">
+					</div>
+					<div class="form-group col-12 col-lg-6">
+						<label for="phoneFB">Contact number</label>
+						<input oninput="phoneVerify(event)" type="text" class="form-control" id="phoneFB"
+							aria-describedby="phoneHelp" placeholder="Enter contact number">
+					</div>
+					<div class="form-group col-12 col-lg-6">
+						<label for="productFB">Product name</label>
+						<input oninput="verify(event)" type="text" class="form-control" id="productFB"
+							aria-describedby="locationHelp" placeholder="Enter product name">
+					</div>
+					<div class="form-group col-12 ">
+						<label for="commentFB">Description</label>
+						<textarea style="height: 150px; resize: none;" oninput="verify(event)" type="text"
+							class="form-control" id="commentFB" aria-describedby="commentHelp"
+							placeholder="Enter comments"></textarea>
+					</div>
+					<div class="col-12" style="text-align: center; margin-top: 20px;">
+						<button type="button" id="submitFB" style="min-width: 40%"
+							class="btn btn-primary">Submit</button>
+					</div>
+				</div>
+			</div>
+		</div>
 
-		function nameVerify(event) {
-			if (event.target == undefined) {
-				if (event.length > 0) {
-					return true;
-				} else {
-					return false;
-				}
-			}
-			else {
-				let name = event.target.value;
-				if (name.length > 0) {
-					event.target.style.borderColor = "Green";
-					return true;
-				} else {
-					event.target.style.borderColor = "Red";
-					return false;
-				}
-			}
-		}
+		<div data-anchor="contactus" class="section" style="background-color: #db675a">
+			<div class="container-fluid">
+				<div class="margin-top-heading row" style="text-align: center; ">
+					<div class="col-12">
+						<h1>Contact Us</h1>
+					</div>
+				</div>
+				<div class="row form-padding" style="padding-bottom: 150px;">
+					<div class="form-group col-12 col-lg-6">
+						<label for="name">Name</label>
+						<input oninput="nameVerify(event)" type="text" class="form-control" id="name"
+							aria-describedby="nameHelp" placeholder="Enter name">
+					</div>
+					<div class="form-group col-12 col-lg-6">
+						<label for="email">Email address</label>
+						<input oninput="emailVerify(event)" type="email" class="form-control" id="email"
+							aria-describedby="emailHelp" placeholder="Enter email">
+					</div>
+					<div class="form-group col-12 col-lg-6">
+						<label for="phone">Contact number</label>
+						<input oninput="phoneVerify(event)" type="text" class="form-control" id="phone"
+							aria-describedby="phoneHelp" placeholder="Enter contact number">
+					</div>
+					<div class="form-group col-12 col-lg-6">
+						<label for="location">Location</label>
+						<input oninput="verify(event)" type="text" class="form-control" id="location"
+							aria-describedby="locationHelp" placeholder="Enter location">
+					</div>
+					<div class="form-group col-12">
+						<label for="comment">Comment</label>
+						<textarea style="height: 150px; resize: none;" oninput="verify(event)" type="text"
+							class="form-control" id="comment" aria-describedby="commentHelp"
+							placeholder="Enter comments"></textarea>
+					</div>
+					<div class="col-12" style="text-align: center; margin-top: 20px;">
+						<button type="button" id="submit" class="btn btn-primary"
+							style="min-width: 40%;">Submit</button>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid fp-auto-height">
+				<div class="row"
+					style="background-color: #eee; text-align: center;padding-top: 50px; padding-bottom: 50px;">
+					<div class="col-12 col-lg-6">
+						<p style="color: black">Popular Bread and Food Products<br>
+							30, Industrial Estate, Kila Maidan<br>
+							Indore, M.P.</p>
+						<p style="color: black">info@popularbreadindore.com</p>
+					</div>
+					<div class="col-12 col-lg-6">
+						<a href="https://m.facebook.com/PopularBreadAndFoodProducts/"><img
+								src="./resources/images/facebook.svg"
+								style="height: 30px; padding-left: 20px; padding-right: 20px;"></a>
+						<a href="https://www.instagram.com/invites/contact/?i=jkriz7hop27x&utm_content=fo29xym"><img
+								src="./resources/images/instagram.svg"
+								style="height: 30px; padding-left: 20px; padding-right: 20px;"></a>
+						<p style="padding-top: 20px; color: black">
+							ISO 9001:2015<br>
+							LIC NO: 11414850001880
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
 
-		function verify(event) {
-			if (event.target == undefined) {
-				if (event.length > 0) {
-					return true;
-				}
-				else {
-					return false;
-				}
-			}
-			else {
-				let message = event.target.value;
-				if (message.length > 0) {
-					event.target.style.borderColor = "Green";
-					return true;
-				} else {
-					event.target.style.borderColor = "Red";
-					return false;
-				}
-			}
-		}
-
-		function phoneVerify(event) {
-			if (event.target == undefined) {
-				if (event.length > 9) {
-					return true;
-				}
-				else {
-					return false;
-				}
-			}
-			else {
-				let message = event.target.value;
-				if (message.length > 9) {
-					event.target.style.borderColor = "Green";
-					return true;
-				} else {
-					event.target.style.borderColor = "Red";
-					return false;
-				}
-			}
-		}
+		<script src="./resources/js/pace.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.29.2/sweetalert2.all.js"></script>
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+			crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+			integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+			crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+			crossorigin="anonymous"></script>
 
 
-		function validateContactUs(obj) {
-			if (nameVerify(obj.name) && phoneVerify(obj.contact_number) && emailVerify(obj.email_id) && verify(obj.description) && verify(obj.address)) {
-				return true;
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/vendors/scrolloverflow.min.js"
+			sync></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.js"></script>
+		<script src="./resources/js/index.js"></script>
+
+		<script>
+			// var slide_index = 1;
+			// displaySlides(slide_index);
+			// function nextSlide(n) {
+			// 	displaySlides(slide_index += n);
+			// }
+			// function currentSlide(n) {
+			// 	displaySlides(slide_index = n);
+			// }
+			// function displaySlides(n) {
+			// 	var i;
+			// 	var slides = document.getElementsByClassName("showSlide");
+			// 	if (n > slides.length) { slide_index = 1 }
+			// 	if (n < 1) { slide_index = slides.length }
+			// 	for (i = 0; i < slides.length; i++) {
+			// 		slides[i].style.display = "none";
+			// 	}
+			// 	slides[slide_index - 1].style.display = "block";
+			// }  
+
+			let arr = document.getElementsByClassName('close-nav')
+			for(let i = 0; i < arr.length; i++){
+				arr[i].addEventListener('click', () => {
+					document.getElementById('close-nav-btn').click();
+				})
 			}
-			return false;
-		}
-		function validateFeedback(obj) {
-			if (nameVerify(obj.name) && phoneVerify(obj.contact) && emailVerify(obj.email) && verify(obj.product) && verify(obj.description)) {
-				return true;
-			}
-			return false;
-		}
-
-		window.onload = () => {
-			document.getElementById('submit').addEventListener('click', (e) => {
-				e.preventDefault();
-				let name = document.getElementById('name').value;
-				let email_id = document.getElementById('email').value;
-				let contact_number = document.getElementById('phone').value;
-				let address = document.getElementById('location').value;
-				let description = document.getElementById('comment').value;
-				let data = { name, contact_number, email_id, description, address }
-				if (validateContactUs(data)) {
-					// fetch call
-					document.getElementById('submit').innerHTML = "Submitting..."
-					fetch('https://popularbreadapi.herokuapp.com/enquiry', {
-						method: "POST",
-						headers: {
-							'Content-Type': 'application/json'
-						},
-						body: JSON.stringify(data)
-					})
-						.then(res => {
-							document.getElementById('name').value = "";
-							document.getElementById('email').value = "";
-							document.getElementById('phone').value = "";
-							document.getElementById('location').value = "";
-							document.getElementById('comment').value = "";
-							document.getElementById('submit').innerHTML = "Submit"
-							return res.json();
-						})
-						.then(data => {
-							if (data.msg === undefined) {
-								document.getElementById('submit').innerHTML = 'Submit'
-								Swal.fire(
-									'Oopppsss..',
-									'There was some technical glitch!',
-									'error'
-								)
-							} else {
-								document.getElementById('submit').innerHTML = 'Submit'
-								Swal.fire(
-									'Submitted',
-									'Successfully submitted the details',
-									'success'
-								)
-							}
-						})
-						.catch(err => {
-							console.log(err)
-							Swal.fire(
-								'Oopppsss..',
-								'There was some internal error!',
-								'error'
-							)
-						})
-				} else {
-					Swal.fire(
-						'Oopppsss..',
-						'Please enter all the fields correctly',
-						'error'
-					)
-				}
-			})
-
-			document.getElementById('submitFB').addEventListener('click', (e) => {
-				e.preventDefault();
-				let name = document.getElementById('nameFB').value;
-				let email = document.getElementById('emailFB').value;
-				let contact = document.getElementById('phoneFB').value;
-				let product = document.getElementById('productFB').value;
-				let description = document.getElementById('commentFB').value;
-				let data = { name, contact, email, product, description }
-				console.log(data)
-				if (validateFeedback(data)) {
-					document.getElementById('submitFB').innerHTML = "Submitting..."
-					fetch('https://popularbreadapi.herokuapp.com/feedback', {
-						method: "POST",
-						headers: {
-							'Content-Type': 'application/json'
-						},
-						body: JSON.stringify(data)
-					})
-						.then(res => {
-							document.getElementById('submitFB').innerHTML = "Submit"
-							document.getElementById('nameFB').value = "";
-							document.getElementById('emailFB').value = "";
-							document.getElementById('phoneFB').value = "";
-							document.getElementById('productFB').value = "";
-							document.getElementById('commentFB').value = "";
-							return res.json();
-						})
-						.then(data => {
-							if (data.msg === undefined) {
-								document.getElementById('submit').innerHTML = 'Submit'
-								Swal.fire(
-									'Oopppsss..',
-									'There was some technical glitch!',
-									'error'
-								)
-							} else {
-								document.getElementById('submit').innerHTML = 'Submit'
-								Swal.fire(
-									'Submitted',
-									'Successfully submitted the details',
-									'success'
-								)
-							}
-						})
-						.catch(err => {
-							console.log(err)
-							Swal.fire(
-								'Oopppsss..',
-								'There was some internal error!',
-								'error'
-							)
-
-						})
-				} else {
-					Swal.fire(
-						'Oopppsss..',
-						'Please enter all the fields correctly',
-						'error'
-					)
-				}
-			})
-		}
-	</script>
-	<script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
-	<script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
-	<script src="//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<script src="resources/js/script.js"></script>
-	<script src="resources/js/jquery.waypoints.min.js"></script>
+		</script>
 </body>
 
 </html>
-
